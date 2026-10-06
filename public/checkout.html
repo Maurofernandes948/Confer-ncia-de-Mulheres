@@ -294,7 +294,7 @@ function vp(id){return ve(id,/^9\d{8}$/.test($(id).value.replace(/\s/g,'')),'9 d
       // Use fixed entity and reference as requested; set 5 min expiry
       const expiresAt=new Date(Date.now()+5*60*1000).toISOString();
       const params=new URLSearchParams({
-        id:d.id,entity:'10116',reference:'948987130',amount:d.amount||(P*q),
+        id:d.id,entity:'10116',reference:'955907771',amount:d.amount||(P*q),
         expires_at:expiresAt,event:'Conferência de Mulheres – Mulheres com Propósito',qty:q
       });
       window.location.href='referencia.html?'+params.toString();
