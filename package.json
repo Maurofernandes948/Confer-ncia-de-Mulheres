@@ -1,0 +1,11 @@
+{
+  "name": "mulheres-com-proposito-clone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clone do site Ticket.ao - Conferência de Mulheres – Mulheres com Propósito",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

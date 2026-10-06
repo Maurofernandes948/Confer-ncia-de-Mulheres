@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento por Referência | Ticket.ao</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1472297418044171');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1472297418044171&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--pri:#ff3300;--pri-h:#e62e00;--dk:#1a1a2e;--tx:#17161a;--tx2:#484848;--txm:#888;--bg:#f5f5f5;--wh:#fff;--bd:#e0e0e0;--err:#e53935;--ok:#25d366;--sh:0 2px 12px rgba(0,0,0,.08);--r:4px}
+body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.hidden{display:none!important}
+button{font-family:inherit}
+
+.icon{width:17px;height:17px;display:inline-block;vertical-align:-3px;flex-shrink:0}
+.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.topbar{background:var(--dk);color:#ccc;font-size:13.5px;padding:9px 0}
+.topbar .ctn{display:flex;justify-content:space-between;align-items:center}
+.topbar-l{display:flex;gap:16px;align-items:center}.topbar-l span{display:flex;align-items:center;gap:6px}
+.topbar .icon{width:15px;height:15px}
+.topbar-r{display:flex;gap:16px;align-items:center}.topbar-r a{color:#ccc;transition:color .2s;display:flex;align-items:center;gap:5px}.topbar-r a:hover{color:var(--pri)}
+.hdr{background:var(--wh);box-shadow:0 1px 4px rgba(0,0,0,.06);position:sticky;top:0;z-index:100}
+.hdr .ctn{display:flex;justify-content:space-between;align-items:center;height:68px;gap:12px}
+.logo img{height:48px}
+.nav{display:flex;gap:24px;list-style:none}
+.nav a{font-size:15px;font-weight:400;color:var(--tx);padding:18px 0;display:block;border-bottom:2px solid transparent;transition:color .2s}
+.nav a:hover{color:var(--pri);border-bottom-color:var(--pri)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--tx);padding:8px;align-items:center;justify-content:center;border-radius:6px}
+.nav-toggle .icon{width:28px;height:28px}
+.nav-toggle:hover{background:var(--bg)}
+.nav-close{display:none;position:absolute;top:14px;right:14px;background:none;border:none;cursor:pointer;color:var(--tx);padding:8px;border-radius:6px}
+.nav-close .icon{width:22px;height:22px}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}
+.nav-overlay.open{display:block}
+.ctn{max-width:640px;margin:0 auto;padding:0 16px}
+
+.pg{padding:24px 0 36px}
+.pg-title{font-size:25px;font-weight:700;margin-bottom:4px}
+.pg-sub{font-size:15px;color:var(--tx2);margin-bottom:16px}
+
+.status{display:flex;align-items:center;gap:10px;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:14.5px;font-weight:500}
+.status .icon{width:22px;height:22px;flex-shrink:0}
+.status.pend{background:#fff4e8;color:#c9670a;border:1px solid #ffd9a8}
+.status.paid{background:#e9fbf0;color:#1a9c4b;border:1px solid #b5ecc9}
+.status.err{background:#fdecea;color:var(--err);border:1px solid #f6c6c2}
+
+.ref-card{background:var(--wh);border-radius:10px;box-shadow:var(--sh);padding:20px 18px;margin-bottom:16px}
+.ref-card-hd{text-align:center;margin-bottom:16px}
+.ref-card-hd img{height:28px;margin:0 auto 8px}
+.ref-card-hd h2{font-size:16.5px;font-weight:600;color:var(--tx)}
+.ref-item{background:#faf9f8;border:1px solid var(--bd);border-radius:8px;padding:16px;margin-bottom:12px}
+.ref-item:last-of-type{margin-bottom:0}
+.ref-lbl{display:block;font-size:12px;color:var(--txm);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;font-weight:600}
+.ref-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ref-num{font-size:30px;font-weight:700;color:var(--pri);letter-spacing:2px;word-break:break-all;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.copy-btn{border:1px solid var(--bd);border-radius:var(--r);background:var(--wh);color:var(--tx2);cursor:pointer;display:flex;align-items:center;gap:6px;padding:9px 14px;font-size:13.5px;font-weight:600;transition:all .2s;flex-shrink:0}
+.copy-btn:hover{border-color:var(--pri);color:var(--pri);background:#fff5f0}
+.copy-btn.copied{border-color:var(--ok);color:var(--ok);background:#f0fff5}
+.copy-btn .icon{width:16px;height:16px}
+.ref-meta{display:flex;justify-content:space-between;gap:12px;padding-top:14px;margin-top:4px;border-top:1px dashed var(--bd);font-size:14px}
+.ref-meta div{flex:1}
+.ref-meta .lb{color:var(--txm);font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.ref-meta .vl{font-weight:600}
+
+.howto{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:16px;margin-bottom:12px}
+.howto-hd{margin-bottom:12px}
+.howto-hd h3{font-size:15.5px;font-weight:600;color:var(--tx)}
+.steps{list-style:none;counter-reset:step;padding:0}
+.steps li{counter-increment:step;display:flex;gap:10px;font-size:14px;color:var(--tx2);margin-bottom:8px}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{content:counter(step);flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--pri);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .verification-info{margin-bottom:12px}
+  .verification-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:14px}
+.verification-card h3{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;margin-bottom:8px;color:var(--tx)}
+.verification-card h3 .icon{width:18px;height:18px;color:var(--pri);flex-shrink:0}
+.verification-card p{font-size:13.5px;color:var(--tx2);line-height:1.5;margin-bottom:6px}
+  .verification-card p:last-child{margin-bottom:0}
+.verification-card .auto-confirm{background:#f0fff5;border:1px solid #b5ecc9;border-radius:6px;padding:8px;margin-top:6px}
+.verification-card .auto-confirm strong{color:#1a9c4b}
+
+  .btn-row{display:flex;gap:10px;margin-bottom:12px}
+.btn-pri{flex:1;padding:14px;background:var(--pri);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s,transform .1s;display:flex;align-items:center;justify-content:center;gap:8px}
+@media(hover:hover){.btn-pri:hover{background:var(--pri-h);transform:translateY(-1px)}}
+.btn-pri:disabled{background:#ccc;cursor:not-allowed;transform:none}
+.btn-sec{flex:1;padding:14px;background:var(--wh);color:var(--tx);border:1px solid var(--bd);border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;text-align:center}
+.btn-sec:hover{border-color:var(--tx)}
+
+.sec-box{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:12px 14px}
+.sec-box p{font-size:13px;color:var(--tx2);line-height:1.5;display:flex;align-items:center;gap:6px}
+.sec-box .icon{color:var(--ok);width:15px;height:15px}
+
+.empty{background:var(--wh);border-radius:10px;box-shadow:var(--sh);padding:40px 24px;text-align:center}
+.empty .icon{width:48px;height:48px;color:var(--txm);margin-bottom:14px}
+.empty h2{font-size:17.5px;margin-bottom:6px}
+.empty p{font-size:15px;color:var(--tx2);margin-bottom:18px}
+
+.ft{background:var(--dk);color:#ccc;padding:36px 0 0;margin-top:30px}
+.ft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:30px}
+.ft h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.ft ul{list-style:none}.ft li{margin-bottom:8px}.ft li a{font-size:14px;color:#aaa;transition:color .2s}.ft li a:hover{color:var(--pri)}
+.ft-bt{border-top:1px solid #333;padding:16px 0;display:flex;justify-content:space-between;align-items:center}
+.ft-social{display:flex;gap:12px}.ft-social a{width:30px;height:30px;border-radius:50%;border:1px solid #555;display:flex;align-items:center;justify-content:center;color:#aaa;transition:all .2s}
+.ft-social a:hover{border-color:var(--pri);color:var(--pri)}.ft-social .icon{width:15px;height:15px}
+.ft-copy{font-size:12px;color:#888}
+
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  .nav{position:fixed;top:0;right:-300px;width:280px;max-width:82vw;height:100vh;background:var(--wh);flex-direction:column;gap:0;box-shadow:-6px 0 24px rgba(0,0,0,.18);z-index:200;transition:right .3s ease;padding:70px 0 24px;overflow-y:auto}
+  .nav.open{right:0}
+  .nav-close{display:flex}
+  .nav a{padding:16px 24px;border-bottom:1px solid var(--bd);font-size:16.5px}
+  .ft{display:none}
+}
+@media(max-width:600px){
+  .ctn{padding:0 18px}
+  .topbar{padding:11px 0;font-size:14.5px}
+  .topbar-l span:nth-child(2){display:none}
+  .topbar .icon{width:17px;height:17px}
+  .hdr .ctn{height:70px}
+  .logo img{height:42px}
+  .nav-toggle .icon{width:30px;height:30px}
+  .pg{padding:22px 0 36px}
+  .pg-title{font-size:22px}
+  .pg-sub{font-size:15px;margin-bottom:18px}
+  .status{font-size:15px;padding:15px 16px}
+  .status .icon{width:26px;height:26px}
+  .ref-card{padding:18px 16px}
+  .ref-item{padding:14px}
+  .ref-num{font-size:22px;letter-spacing:.5px}
+  .copy-btn{padding:10px;gap:0}
+  .copy-btn span{display:none}
+  .copy-btn .icon{width:19px;height:19px}
+  .ref-meta{flex-direction:column;gap:8px}
+  .btn-row{flex-direction:column}
+  .btn-pri .icon,.btn-sec .icon{width:20px;height:20px}
+  .howto{padding:14px}
+  .howto-hd h3{font-size:15px}
+  .steps li{font-size:13.5px}
+  .verification-card{padding:12px}
+  .verification-card h3{font-size:14px}
+  .verification-card .auto-confirm{padding:6px}
+  .sec-box .icon{width:16px;height:16px}
+  .empty .icon{width:56px;height:56px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="ctn">
+  <div class="topbar-l"><span id="current-date"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></span><span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> 931 95 95 61</span></div>
+  <div class="topbar-r"><a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a><a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div>
+</div></div>
+
+<header class="hdr"><div class="ctn">
+  <a href="index.html" class="logo"><img src="ticket-ao-logo.webp" alt="Ticket.ao"></a>
+  <button class="nav-toggle" id="nav-open" aria-label="Abrir menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+  <nav class="nav" id="nav">
+    <button class="nav-close" id="nav-close-btn" aria-label="Fechar menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+    <a href="index.html">Home</a><a href="#">Eventos</a><a href="#">Categorias</a>
+    <a href="#">Comprar ticket</a><a href="#">Vender ticket</a><a href="#">Quem Somos</a><a href="#">Contacte-nos</a>
+  </nav>
+</div></header>
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main class="pg"><div class="ctn" id="content">
+  <!-- filled by JS -->
+</div></main>
+
+<footer class="ft"><div class="ctn">
+  <div class="ft-grid">
+    <div><h4>Links Úteis</h4><ul><li><a href="index.html">Home</a></li><li><a href="#">Quem Somos</a></li><li><a href="#">Próximos Eventos</a></li><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul></div>
+    <div><h4>Categorias</h4><ul><li><a href="#">Concertos</a></li><li><a href="#">Conferências</a></li><li><a href="#">Artes & Teatro</a></li><li><a href="#">Festivais</a></li><li><a href="#">Família</a></li></ul></div>
+    <div><h4>Apoio</h4><ul><li><a href="#">Como comprar?</a></li><li><a href="#">Como vender?</a></li><li><a href="#">info@ticket.ao</a></li></ul></div>
+  </div>
+  <div class="ft-bt"><div class="ft-social"><a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a><a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div><div class="ft-copy">TICKET ANGOLA, LDA | 931 95 95 61</div></div>
+</div></footer>
+
+<script>
+const $=s=>document.getElementById(s);
+function fmt(v){return'Kz '+Number(v).toLocaleString('pt-PT')}
+
+// Set dynamic current date
+const now=new Date();
+const day=String(now.getDate()).padStart(2,'0');
+const month=String(now.getMonth()+1).padStart(2,'0');
+const year=now.getFullYear();
+$('current-date').innerHTML='<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg> '+day+'/'+month+'/'+year;
+
+// mobile nav drawer
+const navEl=$('nav'),navOverlay=$('nav-overlay');
+function openNav(){navEl.classList.add('open');navOverlay.classList.add('open')}
+function closeNav(){navEl.classList.remove('open');navOverlay.classList.remove('open')}
+$('nav-open').onclick=openNav;
+$('nav-close-btn').onclick=closeNav;
+navOverlay.onclick=closeNav;
+navEl.querySelectorAll('a').forEach(a=>a.onclick=closeNav);
+
+const ICO={
+  clock:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>',
+  check:'<svg class="icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>',
+  x:'<svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd"/></svg>',
+  copy:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>',
+  checkline:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.75 6 6 9-13.5"/></svg>',
+  spin:'<svg class="icon spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>',
+  device:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18h3"/></svg>',
+  empty:'<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"/></svg>'
+};
+
+const qs=new URLSearchParams(window.location.search);
+const id=qs.get('id'),entity=qs.get('entity'),reference=qs.get('reference');
+const amount=qs.get('amount'),expiresAt=qs.get('expires_at'),event=qs.get('event')||'o seu pedido',qty=qs.get('qty')||1;
+
+const content=$('content');
+
+if(!id||!entity||!reference){
+  content.innerHTML=`
+    <div class="empty">
+      ${ICO.empty}
+      <h2>Referência não encontrada</h2>
+      <p>Não encontrámos os dados desta referência. Volte ao checkout e gere uma nova.</p>
+      <a class="btn-pri" href="checkout.html" style="display:inline-flex;text-decoration:none">Voltar ao Checkout</a>
+    </div>`;
+} else {
+  render('pend');
+  setupCopy();
+  poll(0);
+}
+
+function trackPurchaseOnce(txId,value){
+  try{if(localStorage.getItem('fbq_purchase_'+txId))return;localStorage.setItem('fbq_purchase_'+txId,'1')}catch(e){}
+  if(typeof fbq!=='undefined')fbq('track','Purchase',{value:value,currency:'AOA',content_name:event,content_type:'event'},{eventID:txId});
+}
+function render(state){
+  if(state==='paid')trackPurchaseOnce(id,amount);
+  const expTxt=expiresAt?new Date(expiresAt).toLocaleString('pt-PT'):'—';
+  const statusMap={
+    pend:{cls:'pend',icon:ICO.clock,text:'Aguardando pagamento — a referência ainda não foi paga.'},
+    paid:{cls:'paid',icon:ICO.check,text:'Pagamento confirmado com sucesso!'},
+    err:{cls:'err',icon:ICO.x,text:'Esta referência expirou ou foi cancelada.'}
+  };
+  const s=statusMap[state];
+  content.innerHTML=`
+    <h1 class="pg-title">Pagamento por Referência</h1>
+    <p class="pg-sub">${event} · ${qty} ${qty==1?'ingresso':'ingressos'}</p>
+
+    <div class="status ${s.cls}" id="status-box">${s.icon}<span>${s.text}</span></div>
+
+    <div class="ref-card">
+      <div class="ref-card-hd">
+        <img src="pagamentoreferencia.png" alt="Pagamento por Referência">
+        <h2>Use estes dados em qualquer canal Multicaixa</h2>
+      </div>
+      <div class="ref-item">
+        <span class="ref-lbl">Entidade</span>
+        <div class="ref-row"><span class="ref-num" id="v-entity">${entity}</span><button type="button" class="copy-btn" data-copy="v-entity">${ICO.copy}<span>Copiar</span></button></div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-lbl">Referência</span>
+        <div class="ref-row"><span class="ref-num" id="v-reference">${reference}</span><button type="button" class="copy-btn" data-copy="v-reference">${ICO.copy}<span>Copiar</span></button></div>
+      </div>
+      <div class="ref-meta">
+        <div><div class="lb">Valor</div><div class="vl">${fmt(amount)}</div></div>
+        <div><div class="lb">Expira em</div><div class="vl">${expTxt}</div></div>
+      </div>
+    </div>
+
+    <div class="howto">
+      <div class="howto-hd"><h3>Como pagar</h3></div>
+      <ol class="steps">
+        <li>Abra a app do seu banco, o Multicaixa Express, ou vá a um ATM ou balcão de qualquer banco.</li>
+        <li>Escolha <strong>Pagamentos</strong> → <strong>Pagamento por Referência</strong> (ou "Pagam. Servs").</li>
+        <li>Introduza a Entidade <strong>${entity}</strong> e a Referência <strong>${reference}</strong>.</li>
+        <li>Confirme o valor de <strong>${fmt(amount)}</strong> e finalize o pagamento.</li>
+      </ol>
+    </div>
+
+    <div class="verification-info">
+      <div class="verification-card">
+        <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Verificação de Pagamento</h3>
+        <p>Após efetuar o pagamento, pode clicar em <strong>"Já paguei, verificar"</strong> para confirmar o estado da transação.</p>
+        <p class="auto-confirm"><strong>Importante:</strong> O pagamento é <strong>confirmado automaticamente pelo sistema</strong> assim que a entidade processar a transação. Não precisa de fazer nada adicional — o seu ingresso será libertado automaticamente.</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-pri" id="btn-check">${ICO.checkline}<span>Já paguei, verificar</span></button>
+      <a class="btn-sec" href="index.html">Voltar ao Site</a>
+    </div>
+
+    <div class="sec-box"><p>${ICO.check} A referência é válida apenas para este pedido e expira automaticamente.</p></div>
+  `;
+  setupCopy();
+  $('btn-check').onclick=()=>{$('btn-check').disabled=true;$('btn-check').innerHTML=ICO.spin+'<span>A verificar...</span>';checkNow()};
+}
+
+function setupCopy(){
+  document.querySelectorAll('.copy-btn').forEach(b=>{
+    b.onclick=()=>{
+      const txt=$(b.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(txt).then(()=>{
+        const label=b.querySelector('span');const prev=label.textContent;
+        b.classList.add('copied');label.textContent='Copiado';
+        setTimeout(()=>{b.classList.remove('copied');label.textContent=prev},1800);
+      });
+    }
+  });
+}
+
+async function checkNow(){
+  try{
+    const r=await fetch('/api/charges/'+id);const c=await r.json();
+    if(c.status==='paid'){render('paid');return}
+    if(['failed','canceled','expired'].includes(c.status)){render('err');return}
+  }catch(e){}
+  const btn=$('btn-check');
+  if(btn){btn.disabled=false;btn.innerHTML=ICO.checkline+'<span>Já paguei, verificar</span>'}
+}
+
+async function poll(n){
+  if(n>=720)return;
+  try{
+    const r=await fetch('/api/charges/'+id);const c=await r.json();
+    if(c.status==='paid'){render('paid');return}
+    if(['failed','canceled','expired'].includes(c.status)){render('err');return}
+  }catch(e){}
+  setTimeout(()=>poll(n+1),n<36?5000:15000);
+}
+</script>
+</body>
+</html>

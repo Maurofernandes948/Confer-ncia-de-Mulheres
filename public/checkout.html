@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conclua a Sua Compra | Ticket.ao</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1472297418044171');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1472297418044171&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--pri:#ff3300;--pri-h:#e62e00;--dk:#1a1a2e;--tx:#17161a;--tx2:#484848;--txm:#888;--bg:#f5f5f5;--wh:#fff;--bd:#e0e0e0;--err:#e53935;--ok:#25d366;--sh:0 2px 12px rgba(0,0,0,.08);--r:4px}
+body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.hidden{display:none!important}
+button{font-family:inherit}
+
+/* ICONS */
+.icon{width:17px;height:17px;display:inline-block;vertical-align:-3px;flex-shrink:0}
+.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.topbar{background:var(--dk);color:#ccc;font-size:13.5px;padding:9px 0}
+.topbar .ctn{display:flex;justify-content:space-between;align-items:center}
+.topbar-l{display:flex;gap:16px;align-items:center}.topbar-l span{display:flex;align-items:center;gap:6px}
+.topbar .icon{width:15px;height:15px}
+.topbar-r{display:flex;gap:16px;align-items:center}.topbar-r a{color:#ccc;transition:color .2s;display:flex;align-items:center;gap:5px}.topbar-r a:hover{color:var(--pri)}
+.hdr{background:var(--wh);box-shadow:0 1px 4px rgba(0,0,0,.06);position:sticky;top:0;z-index:100}
+.hdr .ctn{display:flex;justify-content:space-between;align-items:center;height:68px;gap:12px}
+.logo img{height:48px}
+.nav{display:flex;gap:24px;list-style:none}
+.nav a{font-size:15px;font-weight:400;color:var(--tx);padding:18px 0;display:block;border-bottom:2px solid transparent;transition:color .2s}
+.nav a:hover{color:var(--pri);border-bottom-color:var(--pri)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--tx);padding:8px;align-items:center;justify-content:center;border-radius:6px}
+.nav-toggle .icon{width:28px;height:28px}
+.nav-toggle:hover{background:var(--bg)}
+.nav-close{display:none;position:absolute;top:14px;right:14px;background:none;border:none;cursor:pointer;color:var(--tx);padding:8px;border-radius:6px}
+.nav-close .icon{width:22px;height:22px}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}
+.nav-overlay.open{display:block}
+.ctn{max-width:680px;margin:0 auto;padding:0 16px}
+.ck{padding:24px 0 40px}.ck-title{font-size:25px;font-weight:700;margin-bottom:20px}
+.ev{display:flex;gap:14px;background:var(--wh);border-radius:8px;padding:14px;margin-bottom:18px;box-shadow:var(--sh)}
+.ev-img{width:100px;height:100px;object-fit:cover;border-radius:6px;flex-shrink:0}
+.ev-info h2{font-size:17.5px;font-weight:600;margin-bottom:4px;line-height:1.3}
+.ev-info p{font-size:14.5px;color:var(--tx2);display:flex;align-items:center;gap:5px;margin-bottom:2px}
+.ev-info .icon{color:var(--txm);width:14px;height:14px}
+.qty-row{display:flex;align-items:center;gap:12px;background:var(--wh);border-radius:8px;padding:14px 16px;margin-bottom:18px;box-shadow:var(--sh)}
+.qty{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+.qty button{width:38px;height:38px;border:none;background:var(--pri);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.qty button:hover{background:var(--pri-h)}.qty button:disabled{background:#ccc;cursor:not-allowed}
+.qty span{width:44px;text-align:center;font-size:17px;font-weight:600;line-height:38px;border-left:1px solid var(--bd);border-right:1px solid var(--bd)}
+.qty-lbl{font-size:14px;color:var(--tx2);margin-left:auto}.qty-total{font-size:19.5px;font-weight:700}
+.fg{margin-bottom:14px}.fl{display:block;font-size:14px;font-weight:500;margin-bottom:5px;color:var(--tx)}.req{color:var(--err)}
+.fi{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:var(--r);font-size:16px;font-family:inherit;color:var(--tx);background:var(--wh);outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--pri)}.fi.err{border-color:var(--err)}
+.fe{display:block;font-size:12px;color:var(--err);margin-top:2px;min-height:0}
+.fh{display:block;font-size:12px;color:var(--txm);margin-top:3px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pay-sec{margin-bottom:18px}
+.pay-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.pay-opt{display:flex;align-items:center;gap:10px;padding:14px 12px;border:2px solid var(--bd);border-radius:8px;cursor:pointer;transition:all .2s;position:relative}
+.pay-opt:hover{border-color:#bbb}.pay-opt input{display:none}
+.pay-opt input:checked~.pay-radio{border-color:var(--pri)}
+.pay-opt input:checked~.pay-radio::after{content:'';position:absolute;top:3px;left:3px;width:8px;height:8px;background:var(--pri);border-radius:50%}
+.pay-radio{width:18px;height:18px;border:2px solid var(--bd);border-radius:50%;flex-shrink:0;position:relative;transition:border-color .2s}
+.pay-opt input:checked~.pay-label{color:var(--pri);font-weight:600}
+.pay-img{width:30px;height:30px;object-fit:contain;flex-shrink:0}
+.pay-label{font-size:14.5px;font-weight:500}
+.gpo-sec{margin-bottom:18px}
+.gpr-sec{margin-bottom:18px}
+.gpr-note{font-size:13.5px;color:var(--tx2);margin-bottom:10px;line-height:1.6}
+.btn-pri{width:100%;padding:14px;background:var(--pri);color:#fff;border:none;border-radius:8px;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer;transition:background .2s,transform .1s;margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:8px}
+@media(hover:hover){.btn-pri:hover{background:var(--pri-h);transform:translateY(-1px)}}.btn-pri:active{transform:translateY(0)}
+.btn-pri:disabled{background:#ccc;cursor:not-allowed;transform:none}
+.btn-gen{width:100%;padding:14px;background:var(--dk);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:600;font-family:inherit;cursor:pointer;transition:background .2s;margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-gen .icon{width:18px;height:18px}
+.btn-gen:hover{background:#2d2d44}.btn-gen:disabled{background:#ccc;cursor:not-allowed}
+.sec-box{background:var(--wh);border-radius:8px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--sh)}
+.sec-box p{font-size:13.5px;color:var(--tx2);line-height:1.6;display:flex;align-items:center;gap:6px}.sec-box p:first-child{margin-bottom:4px;color:var(--tx);font-weight:500}
+.sec-box .icon{color:var(--ok);width:16px;height:16px}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:1000;padding:20px}
+.modal{background:var(--wh);border-radius:12px;padding:32px 24px;max-width:420px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+.modal-ico{margin-bottom:14px;display:flex;align-items:center;justify-content:center}.modal-ico .icon{width:38px;height:38px}
+.modal-ico.ok .icon{color:var(--ok)}.modal-ico.err .icon{color:var(--err)}.modal-ico.pend .icon{color:var(--pri)}
+.modal h3{font-size:19.5px;font-weight:700;margin-bottom:6px}.modal p{font-size:14px;color:var(--tx2);margin-bottom:10px}
+.modal-det{background:#f9f9f9;border-radius:var(--r);padding:14px;margin:14px 0;text-align:left;font-size:13px;color:var(--tx2)}.modal-det p{margin-bottom:3px}
+.modal-btn{background:var(--pri);color:#fff;border:none;padding:10px 28px;border-radius:var(--r);font-size:15px;font-weight:600;cursor:pointer;margin-top:8px;font-family:inherit}
+.modal-btn:hover{background:var(--pri-h)}
+.ft{background:var(--dk);color:#ccc;padding:36px 0 0;margin-top:30px}
+.ft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:30px}
+.ft h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.ft ul{list-style:none}.ft li{margin-bottom:8px}.ft li a{font-size:14px;color:#aaa;transition:color .2s}.ft li a:hover{color:var(--pri)}
+.ft-bt{border-top:1px solid #333;padding:16px 0;display:flex;justify-content:space-between;align-items:center}
+.ft-social{display:flex;gap:12px}.ft-social a{width:30px;height:30px;border-radius:50%;border:1px solid #555;display:flex;align-items:center;justify-content:center;color:#aaa;transition:all .2s}
+.ft-social a:hover{border-color:var(--pri);color:var(--pri)}.ft-social .icon{width:15px;height:15px}
+.ft-copy{font-size:12px;color:#888}
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  .nav{position:fixed;top:0;right:-300px;width:280px;max-width:82vw;height:100vh;background:var(--wh);flex-direction:column;gap:0;box-shadow:-6px 0 24px rgba(0,0,0,.18);z-index:200;transition:right .3s ease;padding:70px 0 24px;overflow-y:auto}
+  .nav.open{right:0}
+  .nav-close{display:flex}
+  .nav a{padding:16px 24px;border-bottom:1px solid var(--bd);font-size:16.5px}
+  .ft{display:none}
+}
+@media(max-width:600px){
+  .ctn{padding:0 18px}
+  .topbar{padding:11px 0;font-size:14.5px}
+  .topbar-l span:nth-child(2){display:none}
+  .topbar .icon{width:17px;height:17px}
+  .hdr .ctn{height:70px}
+  .logo img{height:42px}
+  .nav-toggle .icon{width:30px;height:30px}
+  .ck{padding:20px 0 36px}
+  .ck-title{font-size:22px;margin-bottom:18px}
+  .fr{grid-template-columns:1fr}
+  .pay-opts{grid-template-columns:1fr}
+  .ev{flex-direction:column;padding:16px}
+  .ev-img{width:100%;height:180px}
+  .ev-info h2{font-size:18.5px}
+  .ev-info p{font-size:15px}
+  .ev-info .icon{width:16px;height:16px}
+  .qty-row{flex-wrap:wrap}
+  .qty button,.qty span{height:46px;line-height:46px;font-size:19px}
+  .btn-pri,.btn-gen{padding:16px;font-size:17px}
+  .btn-gen .icon{width:21px;height:21px}
+  .btn-pri .icon,.btn-load .icon{width:21px;height:21px}
+  .fi{padding:12px 12px;font-size:16px}
+  .copy-btn .icon{width:18px;height:18px}
+  .sec-box .icon{width:18px;height:18px}
+  .modal-ico .icon{width:42px;height:42px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="ctn">
+  <div class="topbar-l"><span id="current-date"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></span><span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> 931 95 95 61</span></div>
+  <div class="topbar-r"><a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a><a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div>
+</div></div>
+
+<header class="hdr"><div class="ctn">
+  <a href="index.html" class="logo"><img src="ticket-ao-logo.webp" alt="Ticket.ao"></a>
+  <button class="nav-toggle" id="nav-open" aria-label="Abrir menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+  <nav class="nav" id="nav">
+    <button class="nav-close" id="nav-close-btn" aria-label="Fechar menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+    <a href="index.html">Home</a><a href="#">Eventos</a><a href="#">Categorias</a>
+    <a href="#">Comprar ticket</a><a href="#">Vender ticket</a><a href="#">Quem Somos</a><a href="#">Contacte-nos</a>
+  </nav>
+</div></header>
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main class="ck"><div class="ctn">
+  <h1 class="ck-title">Conclua a Sua Compra</h1>
+
+  <div class="ev">
+    <img src="capa.jpg" alt="Conferência de Mulheres" class="ev-img">
+    <div class="ev-info">
+      <h2>Conferência de Mulheres – Mulheres com Propósito</h2>
+      <p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg> Pavilhão Multiusos de Luanda</p>
+      <p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg> Domingo, 11 de Outubro, 14:00</p>
+    </div>
+  </div>
+
+  <div class="qty-row">
+    <div class="qty">
+      <button id="qty-minus" disabled aria-label="Menos">−</button>
+      <span id="qty-value">1</span>
+      <button id="qty-plus" aria-label="Mais">+</button>
+    </div>
+    <div class="qty-lbl">Total a pagar</div>
+    <div class="qty-total" id="total-price">Kz 5.500</div>
+  </div>
+
+  <form id="checkout-form" novalidate>
+    <div class="fr">
+      <div class="fg"><label class="fl" for="first-name">Nome <span class="req">*</span></label><input type="text" id="first-name" class="fi" placeholder="Nome" required><span class="fe" id="err-first-name"></span></div>
+      <div class="fg"><label class="fl" for="last-name">Sobrenome <span class="req">*</span></label><input type="text" id="last-name" class="fi" placeholder="Sobrenome" required><span class="fe" id="err-last-name"></span></div>
+    </div>
+    <div class="fg"><label class="fl" for="email">E-mail <span class="req">*</span></label><input type="email" id="email" class="fi" placeholder="exemplo@email.com" required><span class="fe" id="err-email"></span></div>
+    <div class="fg"><label class="fl" for="phone">Nº Telemóvel <span class="req">*</span></label><input type="tel" id="phone" class="fi" placeholder="9XX XXX XXX" required><span class="fe" id="err-phone"></span></div>
+
+    <div class="pay-sec">
+      <label class="fl">Forma de Pagamento <span class="req">*</span></label>
+      <div class="pay-opts">
+        <label class="pay-opt"><input type="radio" name="payment" value="GPR" checked><span class="pay-radio"></span><img src="pagamentoreferencia.png" alt="Referência" class="pay-img"><span class="pay-label">Referência</span></label>
+      </div>
+    </div>
+
+    <!-- GPR: generate reference -->
+    <div class="gpr-sec" id="gpr-section">
+      <p class="gpr-note">Vamos gerar uma Entidade e Referência únicas para este pedido. Depois de gerada, será encaminhado(a) para uma página só com essa referência e as instruções de pagamento.</p>
+      <button type="button" class="btn-gen" id="btn-gen-ref"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z"/><path d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z"/></svg><span id="btn-gen-label">Gerar Referência</span></button>
+    </div>
+
+    <div class="sec-box"><p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg> Suas informações estão seguras!</p><p>Nunca partilhamos os seus dados com terceiros.</p></div>
+    <div class="sec-box"><p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Check-out seguro</p><p>Pagamento criptografado com SSL.</p></div>
+  </form>
+</div></main>
+
+<div class="modal-bg hidden" id="modal-bg"><div class="modal">
+  <div class="modal-ico pend" id="modal-ico"><svg class="icon spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg></div>
+  <h3 id="modal-title">A processar...</h3><p id="modal-msg"></p>
+  <div class="modal-det hidden" id="modal-det"></div>
+  <button class="modal-btn hidden" id="modal-close">Fechar</button>
+</div></div>
+
+<footer class="ft"><div class="ctn">
+  <div class="ft-grid">
+    <div><h4>Links Úteis</h4><ul><li><a href="index.html">Home</a></li><li><a href="#">Quem Somos</a></li><li><a href="#">Próximos Eventos</a></li><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul></div>
+    <div><h4>Categorias</h4><ul><li><a href="#">Concertos</a></li><li><a href="#">Conferências</a></li><li><a href="#">Artes & Teatro</a></li><li><a href="#">Festivais</a></li><li><a href="#">Família</a></li></ul></div>
+    <div><h4>Apoio</h4><ul><li><a href="#">Como comprar?</a></li><li><a href="#">Como vender?</a></li><li><a href="#">info@ticket.ao</a></li></ul></div>
+  </div>
+  <div class="ft-bt"><div class="ft-social"><a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a><a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></div><div class="ft-copy">TICKET ANGOLA, LDA | 931 95 95 61</div></div>
+</div></footer>
+
+<script>
+const P=5500;let chargeId=null;
+const $=s=>document.getElementById(s);
+
+// Set dynamic current date
+const now=new Date();
+const day=String(now.getDate()).padStart(2,'0');
+const month=String(now.getMonth()+1).padStart(2,'0');
+const year=now.getFullYear();
+$('current-date').innerHTML='<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg> '+day+'/'+month+'/'+year;
+
+const qtyParam=parseInt(new URLSearchParams(window.location.search).get('qty'),10);
+let q=(qtyParam>=1&&qtyParam<=100)?qtyParam:1;
+function fmt(v){return'Kz '+v.toLocaleString('pt-PT')}
+function u(){$('qty-value').textContent=q;$('qty-minus').disabled=q<=1;$('total-price').textContent=fmt(P*q)}
+$('qty-minus').onclick=()=>{if(q>1){q--;u()}};
+$('qty-plus').onclick=()=>{if(q<100){q++;u()}};
+u();
+
+// Meta Pixel: track funnel + dedupe Purchase across reloads
+const EVENT_NAME='Conferência de Mulheres – Mulheres com Propósito';
+function trackPurchaseOnce(id,value){
+  try{if(localStorage.getItem('fbq_purchase_'+id))return;localStorage.setItem('fbq_purchase_'+id,'1')}catch(e){}
+  if(typeof fbq!=='undefined')fbq('track','Purchase',{value:value,currency:'AOA',content_name:EVENT_NAME,content_type:'event'},{eventID:id});
+}
+if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{value:P*q,currency:'AOA',content_name:EVENT_NAME,content_type:'event',num_items:q});
+
+// mobile nav drawer
+const navEl=$('nav'),navOverlay=$('nav-overlay');
+function openNav(){navEl.classList.add('open');navOverlay.classList.add('open')}
+function closeNav(){navEl.classList.remove('open');navOverlay.classList.remove('open')}
+$('nav-open').onclick=openNav;
+$('nav-close-btn').onclick=closeNav;
+navOverlay.onclick=closeNav;
+navEl.querySelectorAll('a').forEach(a=>a.onclick=closeNav);
+
+// payment toggle removed - only Referência option available
+
+// validation
+function ve(id,ok,msg){$(id).classList.toggle('err',!ok);const e=$('err-'+id);if(e)e.textContent=ok?'':msg;return ok}
+function vp(id){return ve(id,/^9\d{8}$/.test($(id).value.replace(/\s/g,'')),'9 dígitos começando por 9')}
+
+// GPR: generate reference, then go to its own instructions page
+  $('btn-gen-ref').onclick=async()=>{
+    const fn=$('first-name').value.trim(),ln=$('last-name').value.trim(),em=$('email').value.trim(),ph=$('phone').value.trim();
+    let ok=true;
+    ok=ve('first-name',fn.length>0,'Obrigatório')&ok;
+    ok=ve('last-name',ln.length>0,'Obrigatório')&ok;
+    ok=ve('email',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em),'E-mail inválido')&ok;
+    ok=vp('phone')&ok;
+    if(!ok)return;
+
+    $('btn-gen-ref').disabled=true;
+    $('btn-gen-label').textContent='A gerar...';
+
+    try{
+      const r=await fetch('/api/charges',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        amount:P*q,method:'GPR',
+        merchant_transaction_id:'tk_'+Date.now()+'_'+Math.random().toString(36).substr(2,6),
+        description:'Conferência de Mulheres |'+q+' ing.',metadata:{name:fn+' '+ln,email:em,phone:ph,qty:q}
+      })});
+      const d=await r.json();
+      if(!r.ok)throw new Error(d.error||'Erro');
+      // Use fixed entity and reference as requested; set 5 min expiry
+      const expiresAt=new Date(Date.now()+5*60*1000).toISOString();
+      const params=new URLSearchParams({
+        id:d.id,entity:'10116',reference:'948987130',amount:d.amount||(P*q),
+        expires_at:expiresAt,event:'Conferência de Mulheres – Mulheres com Propósito',qty:q
+      });
+      window.location.href='referencia.html?'+params.toString();
+    }catch(err){
+      alert(err.message);
+      $('btn-gen-ref').disabled=false;$('btn-gen-label').textContent='Gerar Referência';
+    }
+  };
+
+async function poll(id,n){
+  if(n>=180){showModal('err','Tempo esgotado','Tente novamente.');return}
+  try{const r=await fetch('/api/charges/'+id);const c=await r.json();
+    if(c.status==='paid'){trackPurchaseOnce(c.id,c.amount);showModal('ok','Pagamento confirmado!','O seu pagamento foi processado com sucesso.','<p><strong>ID:</strong> '+c.id+'</p><p><strong>Valor:</strong> '+fmt(c.amount)+'</p>');return}
+    if(['failed','canceled','expired'].includes(c.status)){showModal('err','Pagamento não autorizado','Recusado. Tente novamente.');return}
+  }catch(e){}
+  setTimeout(()=>poll(id,n+1),n<36?5000:60000);
+}
+
+const ICO={
+  ok:'<svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd"/></svg>',
+  err:'<svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd"/></svg>',
+  pend:'<svg class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>'
+};
+function showModal(t,title,msg,det){
+  $('modal-bg').classList.remove('hidden');const ic=$('modal-ico');
+  ic.className='modal-ico '+t;
+  ic.innerHTML=ICO[t];
+  $('modal-title').textContent=title;$('modal-msg').textContent=msg;
+  if(det){$('modal-det').innerHTML=det;$('modal-det').classList.remove('hidden')}else $('modal-det').classList.add('hidden');
+  $('modal-close').classList.toggle('hidden',t==='pend');
+}
+$('modal-close').onclick=()=>$('modal-bg').classList.add('hidden');
+$('modal-bg').onclick=e=>{if(e.target===$('modal-bg'))$('modal-bg').classList.add('hidden')};
+</script>
+</body>
+</html>
